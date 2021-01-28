@@ -6,5 +6,9 @@ exports.handler = function (event, context, callback) {
     },
     body: '<p>Hello world!</p>',
   }
+  function replace(){
+  var text = document.getElementById("textarea").value;
+  var newText = text.replace(document.write('Hello' + " " + text +'!'));
+  document.getElementById("textarea").value = newText;
   callback(null, response)
 }
