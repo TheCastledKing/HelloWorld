@@ -1,0 +1,27 @@
+<html><body>
+
+<script>
+function replace() {
+  let name = document.querySelector("#name").value;
+  let url =
+    "https://o5vwqzg55k.execute-api.us-east-1.amazonaws.com/test?name=" + name;
+  fetch(url)
+    .then((response) => response.json())
+    .then((json) => {
+      document.querySelector("#result").innerText = json.greeting;
+    });
+}
+</script>
+
+<h1 id="result">Hello, World!</h1>
+
+<p> What is your name? </p>
+<input type="text" id="name"> <button id="button" onclick="replace()">SUBMIT</button>
+
+
+
+<br><br>
+<img src="https://media4.giphy.com/media/PxSFAnuubLkSA/giphy.gif?cid=ecf05e4764e3580c998899d44af3c4ec76b2934d60e7d94f&rid=giphy.gif">
+ 
+</body>
+</html>
